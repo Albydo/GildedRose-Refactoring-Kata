@@ -16,9 +16,9 @@ group = 'com.gildedrose'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    targetCompatibility JavaVersion.VERSION_14
+    targetCompatibility JavaVersion.VERSION_21
 }
-sourceCompatibility = "14"
+sourceCompatibility = "21"
 
 test {
     useJUnitPlatform()

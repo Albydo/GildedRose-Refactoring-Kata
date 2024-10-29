@@ -24,18 +24,11 @@ class GildedRose {
                 returnItemWrappers.add(new BackstagePasses(item));
             else if(item.name.contains("Sulfuras"))
                 returnItemWrappers.add(new Sulfuras(item));
+            else if (item.name.contains("Conjured"))
+                returnItemWrappers.add(new Conjured(item));
             else
                 returnItemWrappers.add(new DefaultItem(item));
-            /*ItemWrapper itemWrapper = switch (item.name){
-                case "Aged Brie" -> new AgedBrie(item);
-                case "Backstage passes to a TAFKAL80ETC concert" -> new BackstagePasses(item);
-                case "Sulfuras, Hand of Ragnaros" -> new Sulfuras(item);
-                //Conjured items verliezen quality dubbel zo snel, maar in test gebeurt dit nog aan het normaal tempo
-                //Uncomment volgende lijn voor Conjured items dubbel zo snel quality le laten verliezen
-                //case "Conjured Mana Cake" -> new Conjured(item);
-                default -> new DefaultItem(item);
-            };
-            returnItemWrappers.add(itemWrapper);*/
+
         });
         return returnItemWrappers;
     }
