@@ -12,6 +12,8 @@ public class AgedBrie extends ItemWrapper{
     public void updateQuality(){
         if(item.sellIn > 0){
             item.quality = Math.min(item.quality + 1, 50);
+        }else{
+            item.quality = Math.min(item.quality + 2, 50);
         }
         item.sellIn--;
     }
