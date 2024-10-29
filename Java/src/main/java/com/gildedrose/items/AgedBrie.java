@@ -6,17 +6,13 @@ public class AgedBrie extends ItemWrapper{
 
     public AgedBrie(Item item){
         super(item, 50);
-        changeQualityAdd();
     }
 
     @Override
     protected void changeQualityAdd(){
-        if(item.sellIn > 0){
-            qualityAdd = 1;
-        }
-        else {
-            qualityAdd = 2;
-        }
+        //Zelfde logica als een normaal item, maar optellen ipv aftrekken
+        super.changeQualityAdd();
+        qualityAdd = qualityAdd * -1;
     }
 
 }

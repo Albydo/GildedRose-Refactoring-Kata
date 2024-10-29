@@ -6,7 +6,6 @@ public class BackstagePasses extends ItemWrapper {
 
     public BackstagePasses(Item item) {
         super(item, 50);
-        changeQualityAdd();
     }
 
     @Override
