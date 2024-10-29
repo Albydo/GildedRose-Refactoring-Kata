@@ -7,7 +7,7 @@ public class BackstagePasses extends ItemWrapper {
     public BackstagePasses(Item item) {
         super(item);
     }
-
+    
     @Override
     protected void changeQualityAdd(){
         if(item.sellIn > 10){

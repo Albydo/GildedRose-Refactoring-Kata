@@ -8,6 +8,7 @@ public class Conjured extends ItemWrapper{
         super(item);
     }
 
+    //Kwaliteit daalt 2 keer zo snel
     @Override
     protected void changeQualityAdd() {
         super.changeQualityAdd();
