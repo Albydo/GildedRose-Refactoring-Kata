@@ -8,6 +8,7 @@ public class Sulfuras extends ItemWrapper {
         super(item, 80);
     }
 
+    //Dit item blijft hetzelfde
     @Override
     public void updateQuality() {
 

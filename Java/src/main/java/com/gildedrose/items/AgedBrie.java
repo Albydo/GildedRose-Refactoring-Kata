@@ -5,7 +5,7 @@ import com.gildedrose.Item;
 public class AgedBrie extends ItemWrapper{
 
     public AgedBrie(Item item){
-        super(item, 50);
+        super(item);
     }
 
     @Override

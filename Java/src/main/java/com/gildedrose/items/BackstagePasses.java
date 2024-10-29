@@ -5,7 +5,7 @@ import com.gildedrose.Item;
 public class BackstagePasses extends ItemWrapper {
 
     public BackstagePasses(Item item) {
-        super(item, 50);
+        super(item);
     }
 
     @Override
