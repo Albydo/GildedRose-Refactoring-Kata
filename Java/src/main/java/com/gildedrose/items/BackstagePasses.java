@@ -5,24 +5,28 @@ import com.gildedrose.Item;
 public class BackstagePasses extends ItemWrapper {
 
     public BackstagePasses(Item item) {
-        super(item);
+        super(item, 50);
+        changeQualityAdd();
     }
 
     @Override
-    public void updateQuality() {
+    protected void changeQualityAdd(){
         if(item.sellIn > 10){
-            item.quality = Math.min(item.quality + 1, 50);
+            qualityAdd = 1;
         }
         else if(item.sellIn > 5){
-            item.quality = Math.min(item.quality + 2, 50);
+            qualityAdd = 2;
         }
-        else if (item.sellIn > 0) {
-            item.quality = Math.min(item.quality + 3, 50);
+        else {
+            qualityAdd = 3;
         }
-        else{
-            item.quality = 0;
-        }
-        item.sellIn--;
+    }
 
+    @Override
+    protected void changeQuality(){
+        if(item.sellIn > 0)
+            super.changeQuality();
+        else
+            item.quality = 0;
     }
 }

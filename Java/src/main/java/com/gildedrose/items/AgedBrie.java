@@ -5,17 +5,18 @@ import com.gildedrose.Item;
 public class AgedBrie extends ItemWrapper{
 
     public AgedBrie(Item item){
-        super(item);
+        super(item, 50);
+        changeQualityAdd();
     }
 
     @Override
-    public void updateQuality(){
+    protected void changeQualityAdd(){
         if(item.sellIn > 0){
-            item.quality = Math.min(item.quality + 1, 50);
-        }else{
-            item.quality = Math.min(item.quality + 2, 50);
+            qualityAdd = 1;
         }
-        item.sellIn--;
+        else {
+            qualityAdd = 2;
+        }
     }
 
 }

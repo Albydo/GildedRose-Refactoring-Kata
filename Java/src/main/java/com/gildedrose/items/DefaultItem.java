@@ -4,6 +4,6 @@ import com.gildedrose.Item;
 
 public class DefaultItem extends ItemWrapper{
     public DefaultItem(Item item) {
-        super(item);
+        super(item, 50);
     }
 }
